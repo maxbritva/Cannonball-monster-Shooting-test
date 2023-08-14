@@ -18,9 +18,8 @@ namespace Game.Player
 			plane.Raycast(ray, out _distance);
 			Vector3 point = ray.GetPoint(_distance);
 			Vector3 toAim = point - transform.position;
-			//toAim.y = Mathf.Clamp(toAim.y, -10f,10f);
-			//transform.rotation = Quaternion.LookRotation(toAim);
-			transform.rotation = Quaternion.Euler(new Vector3(toAim.y,toAim.x));
+			toAim = new Vector3(toAim.x,0,toAim.z);
+			transform.rotation = Quaternion.LookRotation(toAim);
 		}
 	}
 }
