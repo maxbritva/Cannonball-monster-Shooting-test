@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="23c77ed3-9054-4817-a148-9afd383343b8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Cannonball-monster-Shooting-test/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Cannonball-monster-Shooting-test/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cannonball-monster-Shooting-test/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cannonball-monster-Shooting-test/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cannonball-monster-Shooting-test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cannonball-monster-Shooting-test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ball.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ball/BallMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ball/BallMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/PlayerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ExitButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ExitButton.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ExitButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ball/BallMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Player/PlayerInput.cs" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -21,12 +58,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="rider.run.widget.enabled.cache" value="false" />
-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -34,9 +72,8 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <list />
+        <set />
       </option>
       <method v="2" />
     </configuration>
@@ -44,9 +81,8 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <list />
+        <set />
       </option>
       <method v="2" />
     </configuration>
@@ -61,6 +97,7 @@
       <updated>1692026687315</updated>
       <workItem from="1692026727147" duration="266000" />
       <workItem from="1692031436477" duration="163000" />
+      <workItem from="1692034674030" duration="1230000" />
     </task>
     <servers />
   </component>
@@ -80,8 +117,23 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="648" y="307" key="#Custom_Plugin_Repositories" timestamp="1692034865072">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="648" y="307" key="#Custom_Plugin_Repositories/0.0.1536.816@0.0.1536.816" timestamp="1692034865072" />
+    <state x="476" y="145" key="#Servers" timestamp="1692034758902">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="476" y="145" key="#Servers/0.0.1536.816@0.0.1536.816" timestamp="1692034758902" />
+    <state x="277" y="53" key="SettingsEditor" timestamp="1692034947962">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="277" y="53" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1692034947962" />
   </component>
 </project>
