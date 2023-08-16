@@ -13,6 +13,44 @@
             </e>
           </e>
         </e>
+        <e p="FX" t="Include">
+          <e p="JMO Assets" t="Include">
+            <e p="Cartoon FX Remaster" t="Include">
+              <e p="CFXR Assets" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="CFXR Editor.asmdef" t="Include" />
+                  <e p="CFXR_BuildShaderPreprocessor.cs" t="Include" />
+                  <e p="CFXR_ExpressionParser.cs" t="Include" />
+                  <e p="CFXR_MaterialInspector.cs" t="Include" />
+                  <e p="CFXR_Styles.cs" t="Include" />
+                </e>
+                <e p="Scripts" t="Include">
+                  <e p="CFXR Runtime.asmdef" t="Include" />
+                  <e p="CFXR_Effect.CameraShake.cs" t="Include" />
+                  <e p="CFXR_Effect.cs" t="Include" />
+                  <e p="CFXR_EmissionBySurface.cs" t="Include" />
+                  <e p="CFXR_ParticleText.cs" t="Include" />
+                  <e p="CFXR_ParticleTextFontAsset.cs" t="Include" />
+                </e>
+                <e p="Shaders" t="Include">
+                  <e p="CFXR Particle Distortion.shader" t="Include" />
+                  <e p="CFXR Particle Glow.shader" t="Include" />
+                  <e p="CFXR Particle Procedural Ring.shader" t="Include" />
+                  <e p="CFXR Particle Ubershader.shader" t="Include" />
+                  <e p="CFXR.cginc" t="Include" />
+                  <e p="CFXR_PASSES.cginc" t="Include" />
+                  <e p="CFXR_SETTINGS.cginc" t="Include" />
+                  <e p="CFXR_URP.cginc" t="Include" />
+                </e>
+              </e>
+              <e p="CFXR Prefabs" t="Include">
+                <e p="Texts" t="Include">
+                  <e p="_Make your own text effect.txt" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Plugins" t="Include">
           <e p="Zenject" t="Include">
             <e p="LICENSE.txt" t="Include" />
@@ -935,15 +973,26 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="DI" t="Include">
+            <e p="GameInstaller.cs" t="Include" />
+          </e>
           <e p="Game" t="Include">
+            <e p="DeadZone.cs" t="Include" />
+            <e p="Enemy" t="Include">
+              <e p="EnemyBase.cs" t="Include" />
+              <e p="PatrolPoints.cs" t="Include" />
+              <e p="Turtle.cs" t="Include" />
+            </e>
+            <e p="IDamageable.cs" t="Include" />
+            <e p="IMovable.cs" t="Include" />
             <e p="Player" t="Include">
               <e p="Ball" t="Include">
                 <e p="BallCollision.cs" t="Include" />
-                <e p="BallMove.cs" t="Include" />
                 <e p="BallPool.cs" t="Include" />
+                <e p="Explode.cs" t="Include" />
               </e>
-              <e p="CannonMove.cs" t="Include" />
               <e p="PlayerInput.cs" t="Include" />
+              <e p="Shoot.cs" t="Include" />
             </e>
           </e>
           <e p="UI" t="Include">
@@ -952,6 +1001,8 @@
         </e>
       </e>
       <e p="Cannonball-monster-Shooting-test.sln" t="IncludeFlat" />
+      <e p="CFXREditor.csproj" t="IncludeRecursive" />
+      <e p="CFXRRuntime.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />

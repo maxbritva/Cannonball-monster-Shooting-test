@@ -1,35 +1,57 @@
 ﻿using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 using Zenject;
 
 namespace Game.Enemy
 {
-	public class Turtle : EnemyBase, IMovable
+	public enum TurtleStates
 	{
+		Idle, Walk, Died
+	}
+	public class Turtle : EnemyBase
+	{
+		[SerializeField] private Animator _animator;
 		private PatrolPoints _patrolPoints;
+		private Vector3 _targetPoint;
 
 		[Inject] private void Construct(PatrolPoints patrolPoints) => _patrolPoints = patrolPoints;
+		protected override void OnEnable() => SetState(TurtleStates.Idle);
 
-		protected override void OnEnable()
+		private void SetState(TurtleStates targetState)
 		{
-			StartCoroutine(StartPatrol());
-
-		}
-
-		public void Move()
-		{
-			
+			if (targetState == TurtleStates.Idle)
+				Idle();
+			else if (targetState == TurtleStates.Walk)
+				StartCoroutine(StartPatrol());
+			else if (targetState == TurtleStates.Died)
+			{ }
 		}
 
 		private IEnumerator StartPatrol()
 		{
+			_targetPoint = _patrolPoints.GetRandomPointToGo(transform.position);
+			_animator.SetBool("IsRunning", true);
+			RotationToTarget();
 			while (true)
 			{
 				transform.position = Vector3.MoveTowards(transform.position, 
-					_patrolPoints.Points[Random.Range(0,_patrolPoints.Points.Count)].position, 
-					10f * Time.deltaTime); 
+					_targetPoint,3f * Time.deltaTime);
+				if (transform.position == _targetPoint)
+				{
+					SetState(TurtleStates.Idle);
+					break;
+				}
 				yield return null;
 			}
 		}
+
+		private async void Idle()
+		{
+			_animator.SetBool("IsRunning", false);
+			await Task.Delay(2000);
+			SetState(TurtleStates.Walk);
+		}
+		private void RotationToTarget() => transform.rotation = Quaternion.LookRotation((transform.position - _targetPoint).normalized);
 	}
 }

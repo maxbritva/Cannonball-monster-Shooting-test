@@ -12,7 +12,8 @@ public class BallCollision : MonoBehaviour
 	{
 		if (other.TryGetComponent(out Enemy.EnemyBase enemy))
 		{
-			_explode.Terminate(transform.position);
+			enemy.TakeDamage(30);
+			//_explode.Terminate(transform.position);
 			gameObject.SetActive(false);
 			// effect
 		}
