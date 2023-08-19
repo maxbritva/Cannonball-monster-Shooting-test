@@ -20,13 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23c77ed3-9054-4817-a148-9afd383343b8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuUIUpdater.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuUIUpdater.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cannonball-monster-Shooting-test/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cannonball-monster-Shooting-test/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cannonball-monster-Shooting-test/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cannonball-monster-Shooting-test/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cannonball-monster-Shooting-test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cannonball-monster-Shooting-test/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/RPG Monster DUO PBR Polyart/Animators/TurtleShell.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/RPG Monster DUO PBR Polyart/Animators/TurtleShell.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/PatrolPoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/PatrolPoints.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/Turtle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/Turtle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ball/BallCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ball/BallCollision.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +44,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/PatrolPoints.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/Turtle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ball/BallCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuUIUpdater.cs" />
       </list>
     </option>
   </component>
@@ -66,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="rider.run.widget.enabled.cache" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -101,6 +101,7 @@
       <workItem from="1692031436477" duration="163000" />
       <workItem from="1692034674030" duration="1230000" />
       <workItem from="1692177425523" duration="11168000" />
+      <workItem from="1692444648686" duration="896000" />
     </task>
     <servers />
   </component>
@@ -138,10 +139,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="476" y="145" key="#Servers/0.0.1536.816@0.0.1536.816" timestamp="1692034758902" />
-    <state x="277" y="53" key="SettingsEditor" timestamp="1692034947962">
+    <state x="277" y="53" key="SettingsEditor" timestamp="1692444823548">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="277" y="53" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1692034947962" />
+    <state x="277" y="53" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1692444823548" />
     <state x="93" y="93" width="1350" height="630" key="VCS.FileHistoryDialog" timestamp="1692185502728">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

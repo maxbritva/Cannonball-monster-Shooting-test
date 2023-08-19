@@ -977,26 +977,72 @@
             <e p="GameInstaller.cs" t="Include" />
           </e>
           <e p="Game" t="Include">
+            <e p="Background.cs" t="Include" />
+            <e p="Booster" t="Include">
+              <e p="BoosterSpawner.cs" t="Include" />
+              <e p="FreezeBooster.cs" t="Include" />
+              <e p="IBooster.cs" t="Include" />
+              <e p="KillerBooster.cs" t="Include" />
+            </e>
+            <e p="Core" t="Include">
+              <e p="EndGame" t="Include">
+                <e p="EndGameSoundFX.cs" t="Include" />
+                <e p="ExitGame.cs" t="Include" />
+                <e p="GameOverAnimator.cs" t="Include" />
+              </e>
+              <e p="GameManager.cs" t="Include" />
+              <e p="GameStateChanger.cs" t="Include" />
+              <e p="MenuStateChanger.cs" t="Include" />
+              <e p="ObjectPool.cs" t="Include" />
+              <e p="Rotate.cs" t="Include" />
+            </e>
             <e p="DeadZone.cs" t="Include" />
             <e p="Enemy" t="Include">
               <e p="EnemyBase.cs" t="Include" />
-              <e p="PatrolPoints.cs" t="Include" />
+              <e p="Eye.cs" t="Include" />
+              <e p="Spawner" t="Include">
+                <e p="EnemySpawner.cs" t="Include" />
+                <e p="SpawnPosition.cs" t="Include" />
+              </e>
               <e p="Turtle.cs" t="Include" />
+            </e>
+            <e p="FX" t="Include">
+              <e p="CameraShake.cs" t="Include" />
+              <e p="DamageText" t="Include">
+                <e p="DamageText.cs" t="Include" />
+                <e p="DamageTextPool.cs" t="Include" />
+                <e p="DamageTextSpawner.cs" t="Include" />
+              </e>
+              <e p="DestroyEffect" t="Include">
+                <e p="DestroyEffect.cs" t="Include" />
+                <e p="DestroyEffectHide.cs" t="Include" />
+                <e p="DestroyEffectSpawner.cs" t="Include" />
+              </e>
+              <e p="DestroyEffectGenerator.cs" t="Include" />
             </e>
             <e p="IDamageable.cs" t="Include" />
             <e p="IMovable.cs" t="Include" />
+            <e p="LevelSystem" t="Include">
+              <e p="LevelSettings.cs" t="Include" />
+              <e p="LevelSystem.cs" t="Include" />
+              <e p="LevelWaves.cs" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="Ball" t="Include">
                 <e p="BallCollision.cs" t="Include" />
                 <e p="BallPool.cs" t="Include" />
                 <e p="Explode.cs" t="Include" />
               </e>
+              <e p="PlayerData.cs" t="Include" />
               <e p="PlayerInput.cs" t="Include" />
               <e p="Shoot.cs" t="Include" />
             </e>
           </e>
           <e p="UI" t="Include">
+            <e p="EnemyCounter.cs" t="Include" />
             <e p="ExitButton.cs" t="Include" />
+            <e p="MenuUIUpdater.cs" t="Include" />
+            <e p="ScoreCollector.cs" t="Include" />
           </e>
         </e>
       </e>
