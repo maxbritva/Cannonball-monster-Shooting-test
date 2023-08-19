@@ -1,27 +1,48 @@
+using Game.Core;
+using UI;
 using UnityEngine;
 using Zenject;
 
 namespace Game.Player.Ball
 {
-public class BallCollision : MonoBehaviour
-{
-	private Explode _explode;
-	[Inject] private void Construct(Explode explode) => _explode = explode;
-
-	private void OnTriggerEnter(Collider other)
+	
+	public class BallCollision : MonoBehaviour
 	{
-		if (other.TryGetComponent(out Enemy.EnemyBase enemy))
+		private int _damage;
+		private PlayerData _playerData;
+		private ScoreCollector _scoreCollector;	
+		[Inject] private void Construct(PlayerData playerData, ScoreCollector scoreCollector)
 		{
-			enemy.TakeDamage(30);
-			//_explode.Terminate(transform.position);
-			gameObject.SetActive(false);
-			// effect
+			_playerData = playerData;
+			_scoreCollector = scoreCollector;
 		}
-		if (other.TryGetComponent(out DeadZone deadZone))
-			gameObject.SetActive(false);
 
+		private void OnTriggerEnter(Collider other)
+		{
+			if (other.TryGetComponent(out Enemy.EnemyBase enemy))
+			{
+				enemy.TakeDamage(RandomDamage());
+				gameObject.SetActive(false);
+				// effect
+			}
 
+			if (other.TryGetComponent(out DeadZone deadZone))
+				gameObject.SetActive(false);
+			if (other.TryGetComponent(out Background background))
+			{
+				gameObject.SetActive(false);
+				// effect
+			}
+
+			if (other.TryGetComponent(out IBooster booster))
+			{
+				booster.Activate();
+				_scoreCollector.AddScore(20);
+				gameObject.SetActive(false);
+				// effect
+			}
+		}
+		private int RandomDamage() => (int)Random.Range(_playerData.Damage / 2f, (_playerData.Damage * 1.5f));
 	}
-}
 }
 

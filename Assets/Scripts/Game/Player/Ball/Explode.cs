@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game.Player.Ball
 {
@@ -8,24 +7,12 @@ namespace Game.Player.Ball
 		[SerializeField] private float _radius;
 		[SerializeField] private float _force;
 		
-		
-		public void Terminate(Vector3 position)
+		public void Terminate(Vector3 position, GameObject target)
 		{
-			Collider[] overlappedColliders = Physics.OverlapSphere(position, _radius);
-			for (int i = 0; i < overlappedColliders.Length; i++)
-			{
-				Rigidbody rigidbody = overlappedColliders[i].attachedRigidbody;
-				if (rigidbody) 
-					rigidbody.AddExplosionForce(_force, position, _radius,1f);
-				//StartCoroutine(RaycastOff(rigidbody));
-			}
-		}
-
-		private IEnumerator RaycastOff(Rigidbody rigidbody)
-		{
-			yield return new WaitForSeconds(2f);
-			int layerIgnoreRaycast = LayerMask.NameToLayer("Ignore Raycast");
-			rigidbody.gameObject.layer = layerIgnoreRaycast;
+			Rigidbody attachedRigidbody = target.gameObject.GetComponent<Collider>().attachedRigidbody;
+				if (attachedRigidbody) 
+					attachedRigidbody.AddExplosionForce(_force, position, _radius,1f);
+				attachedRigidbody.AddTorque(Vector3.forward * Time.deltaTime * 200f, ForceMode.VelocityChange);
 		}
 	}
 }

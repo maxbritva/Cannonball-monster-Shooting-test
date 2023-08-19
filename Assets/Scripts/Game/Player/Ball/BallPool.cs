@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
@@ -11,9 +10,8 @@ namespace Game.Player.Ball
         [SerializeField] private Transform _shootPoint;
         [SerializeField] private List<GameObject> _poolBall = new List<GameObject>();
         [Inject] private DiContainer _diContainer;
-        private const int StartCount = 5;
 
-        private void Start() => InitPool();
+        private void Start() => CreateBall();
 
         public GameObject GetBallFromPool()
         {
@@ -32,13 +30,6 @@ namespace Game.Player.Ball
             return ball; 
         }
         
-
-        private void InitPool()
-        {
-            for (int i = 0; i < StartCount; i ++)
-                CreateBall();
-        }
-
         private GameObject CreateBall()
         {
             GameObject newBall = _diContainer.InstantiatePrefab(_ballPrefab, _shootPoint.position, _shootPoint.rotation,transform);
