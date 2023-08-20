@@ -16,10 +16,10 @@ namespace UI
 
         public void UpdateUI()
         {
-            _topScoreText.text = _playerData.TopScore.ToString();
-            _coinsText.text = _playerData.Coins.ToString();
+            _topScoreText.text = "ТОП ОЧКОВ: " + _playerData.TopScore.ToString();
+            _coinsText.text = "МОНЕТ: " + _playerData.Coins.ToString();
         }
 
-        public void UpdateUpgradeWindowCoins() => _upgradeWindowCoinsText.text = _playerData.Coins.ToString();
+        public void UpdateUpgradeWindowCoins() => _upgradeWindowCoinsText.text = "МОНЕТ: " + _playerData.Coins.ToString();
     }
 }

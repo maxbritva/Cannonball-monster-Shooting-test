@@ -14,7 +14,7 @@ namespace Game.Booster
 		private readonly WaitForSeconds _waitBeforeSpawn = new WaitForSeconds(3f);
 		private readonly WaitForSeconds _waitBetweenSpawn = new WaitForSeconds(10f);
 		private readonly WaitForSeconds _oneTick = new WaitForSeconds(2f);
-		private int _moveCounter = 0;
+		private int _moveCounter;
 		
 		private void Start() {
 			for (int i = 0; i < _boosters.Count; i++) 

@@ -29,11 +29,6 @@ namespace Game.LevelSystem
 			_levelBar.fillAmount = 0f;
 			_text.text = _levelCounter.ToString();
 		}
-		public void ResetLevel()
-		{
-			
-		}
-
 		[Inject] private void Construct(LevelWaves levelWaves, EnemySpawner enemySpawner)
 		{
 			_levelWaves = levelWaves;

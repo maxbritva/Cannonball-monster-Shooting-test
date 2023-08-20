@@ -40,10 +40,7 @@ namespace Game.Core.EndGame
 			_scoreCollector = scoreCollector;
 		}
 		
-		private void OnEnable()
-		{
-			Init();
-		}
+		private void OnEnable() => Init();
 
 		private void Init()
 		{

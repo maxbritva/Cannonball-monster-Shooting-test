@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Game.Core.Shop;
 using UnityEngine;
 using Zenject;
 
@@ -11,16 +12,18 @@ namespace Game.Player
 		private bool _isStunned = true;
 		public Coroutine Stunned { get; set; }
 		private Shoot _shoot;
-		private PlayerData _playerData;
+		private UpgradeLoader _upgradeLoader;
 		private Vector3 _aim;
+		public Vector3 Aim => (_aim - transform.position).normalized;
+
 		private float _timer;
 		private WaitForSeconds _stunnedTimer = new WaitForSeconds(2f);
 
 		void Update () => GetRaycastClick();
-		[Inject] private void Construct(Shoot shoot, PlayerData playerData)
+		[Inject] private void Construct(Shoot shoot, UpgradeLoader upgradeLoader)
 		{
 			_shoot = shoot;
-			_playerData = playerData;
+			_upgradeLoader = upgradeLoader;
 		}
 
 		private void GetRaycastClick()
@@ -32,7 +35,7 @@ namespace Game.Player
 				_aim = hit.point;
 			transform.LookAt(hit.point);
 			_timer += Time.deltaTime;
-			if (!(_timer > _playerData.ShotInterval)) return;
+			if (!(_timer > _upgradeLoader.SpeedCurrentLevel.Value)) return;
 			if (!Input.GetMouseButtonDown(0)) return;
 			_shoot.Shot(_aim);
 			_timer = 0;

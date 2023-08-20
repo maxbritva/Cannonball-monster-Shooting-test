@@ -1,4 +1,4 @@
-﻿namespace Game.Player
+﻿namespace Game.Booster
 {
 	public interface IBooster
 	{

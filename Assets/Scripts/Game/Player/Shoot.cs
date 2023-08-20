@@ -8,13 +8,14 @@ namespace Game.Player
 	{
 		[SerializeField] private ParticleSystem _shootParticle;
 		private BallPool _ballPool;
-
-		[Inject] private void Construct(BallPool ballPool) => _ballPool = ballPool;
+		
 		public void Shot(Vector3 aim) {
 			_shootParticle.Play();
 			Vector3 direction = (aim - transform.position).normalized;
 			GameObject ballFromPool = _ballPool.GetBallFromPool();
-			ballFromPool.GetComponent<Rigidbody>().velocity = direction * (23000f * Time.deltaTime);
+			//ballFromPool.GetComponent<Rigidbody>().velocity = direction * (23000f * Time.deltaTime); may be upgrade for rotation ball
 		}
+		
+		[Inject] private void Construct(BallPool ballPool) => _ballPool = ballPool;
 	}
 }

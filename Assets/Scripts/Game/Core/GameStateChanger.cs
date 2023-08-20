@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using Game.Booster;
-using Game.Core.EndGame;
 using Game.Enemy.Spawner;
 using Game.Player;
 using UnityEngine;
@@ -9,21 +8,24 @@ using Zenject;
 
 namespace Game.Core
 {
+	[RequireComponent(typeof(AudioSource))]
 	public class GameStateChanger : MonoBehaviour
 	{
 		[SerializeField] private Text _startAnimationText;
 		[SerializeField] private GameObject _gameUI;
 		[SerializeField] private GameObject _menuUI;
+		[SerializeField] private AudioSource _audioSource;
 		private LevelSystem.LevelSystem _levelSystem;
 		private BoosterSpawner _boosterSpawner;
 		private EnemySpawner _enemySpawner;
 		private PlayerInput _playerInput;
 		private GameManager _gameManager;
 		private ObjectPool _objectPool;
+		private MenuStateChanger _menuStateChanger;
 		private WaitForSeconds _tick = new WaitForSeconds(1f);
 
 		[Inject] private void Construct(LevelSystem.LevelSystem levelSystem, BoosterSpawner boosterSpawner, 
-			EnemySpawner enemySpawner, PlayerInput playerInput, GameManager gameManager, ObjectPool objectPool)
+			EnemySpawner enemySpawner, PlayerInput playerInput, GameManager gameManager, ObjectPool objectPool, MenuStateChanger menuStateChanger)
 		{
 			_levelSystem = levelSystem;
 			_boosterSpawner = boosterSpawner;
@@ -31,14 +33,16 @@ namespace Game.Core
 			_playerInput = playerInput;
 			_gameManager = gameManager;
 			_objectPool = objectPool;
+			_menuStateChanger = menuStateChanger;
 		}
 		public void StartGame() => StartCoroutine(GameStartAnimation());
 
 		private IEnumerator GameStartAnimation()
 		{
+			_menuStateChanger.AudioSource.Stop();
+			_audioSource.Play();
 			_menuUI.SetActive(false);
 			_gameUI.SetActive(true);
-			_levelSystem.ResetLevel();
 			_startAnimationText.gameObject.SetActive(true);
 			for (int i = 3; i > 0; i--)
 			{
@@ -49,7 +53,7 @@ namespace Game.Core
 			InitializeCore();
 		}
 
-		private void InitializeCore()
+		public void InitializeCore()
 		{
 			_levelSystem.ActivateLevelTimer();
 			_boosterSpawner.ActivateSpawner();
@@ -59,6 +63,7 @@ namespace Game.Core
 
 		public void InitializeGameOver()
 		{
+			_audioSource.Stop();
 			_levelSystem.DeactivateLevelTimer();
 			_boosterSpawner.Deactivate();
 			_enemySpawner.DeactivateAll();

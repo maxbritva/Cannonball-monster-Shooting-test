@@ -2,6 +2,5 @@
 
 namespace Game
 {
-	public class DeadZone : MonoBehaviour
-	{ }
+	public class DeadZone : MonoBehaviour { }
 }

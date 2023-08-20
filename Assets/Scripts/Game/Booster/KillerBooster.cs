@@ -1,5 +1,4 @@
 ﻿using Game.Core;
-using Game.Player;
 using UI;
 using UnityEngine;
 using Zenject;
@@ -11,12 +10,6 @@ namespace Game.Booster
 		private ObjectPool _objectPool;
 		private EnemyCounter _enemyCounter;
 
-		[Inject] private void Construct(ObjectPool objectPool, EnemyCounter enemyCounter)
-		{
-			_objectPool = objectPool;
-			_enemyCounter = enemyCounter;
-		}
-
 		public void Activate()
 		{
 			gameObject.SetActive(false);
@@ -24,6 +17,11 @@ namespace Game.Booster
 			_enemyCounter.SetCurrentEnemyInGame(-10);
 			_enemyCounter.OnChange?.Invoke();
 			
+		}
+		[Inject] private void Construct(ObjectPool objectPool, EnemyCounter enemyCounter)
+		{
+			_objectPool = objectPool;
+			_enemyCounter = enemyCounter;
 		}
 	}
 }

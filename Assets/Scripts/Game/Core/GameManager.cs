@@ -8,6 +8,7 @@ namespace Game.Core
 	{
 		Menu,Game,EndGame
 	}
+	
 	public class GameManager : MonoBehaviour
 	{
 		private GameStateChanger _gameStateChanger;
